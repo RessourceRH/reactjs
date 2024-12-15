@@ -4,11 +4,9 @@ FROM node:20-alpine
 # Définir le répertoire de travail à l'intérieur du conteneur
 WORKDIR /app
 
-# Copier les fichiers package.json et package-lock.json (si disponible)
-COPY package*.json ./
-
-# Installer les dépendances de l'application
-RUN npm install
+# Copier les fichiers nécessaires pour installer les dépendances
+COPY package.json package-lock.json ./
+RUN npm ci && npm cache clean --force
 
 # Copier le reste des fichiers du projet
 COPY . .
@@ -16,8 +14,16 @@ COPY . .
 # Compiler l'application pour la production
 RUN npm run build
 
-# Installer un serveur HTTP léger pour servir l'application
-RUN npm install -g serve
+# Étape 2 : Image finale pour l'exécution
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+# Copier uniquement les fichiers nécessaires pour exécuter l'application
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+# Définir les variables d'environnement
 
 # Exposer le port pour le serveur HTTP
 EXPOSE 3030
