@@ -13,7 +13,7 @@ RUN npm install
 # Copier le reste des fichiers du projet
 COPY . .
 
-# Exposer le port sur lequel l'application sera exécutée
+# Exposer le port sur lequel l'application sera exécutées
 EXPOSE 3131
 
 # Démarrer l'application
