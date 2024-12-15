@@ -1,0 +1,181 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.modal-container {
+  max-width: 600px; /* Réduisez la largeur maximale selon vos besoins */
+  margin: 0 auto; /* Centre le modal horizontalement */
+ padding: 1%;
+}
+#modal-modal-title{
+  padding: 20px;
+  text-align: center;
+}
+.titreG{
+  font-weight: bolder;
+  
+  color:green
+}
+
+.titre{
+  margin: 0.1%;
+  text-decoration-line: underline;
+}
+
+.row{
+  grid-column: auto;
+}
+
+
+
+.grid-margin{
+  margin-top: 5%;
+}
+.prev{
+  size: 15px;
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+}
+[data-aos] {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+.over{
+  overflow-y: auto
+}
+
+
+
+
+
+/* Styles généraux pour l'ensemble de la section */
+.about-section {
+  font-family: 'Arial', sans-serif; /* Choisissez une police appropriée */
+  color: #222020; /* Couleur du texte principal */
+  background-color: #f9f9f9; /* Couleur de fond légère */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la section */
+.about-section h2.h3.mb3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6e6b6b; /* Couleur du titre */
+  margin-bottom: 20px;
+  margin-top:20px ;
+}
+
+/* Texte principal */
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #383434; /* Couleur du texte */
+}
+
+/* Informations personnelles */
+.about-section .row {
+  margin-top: 20px;
+}
+
+.about-section .col-sm-4 {
+  font-weight: 600;
+  color: #6e6b6b;
+}
+
+.about-section .col-sm-8 {
+  font-weight: 300;
+  color: #535151;
+}
+
+/* Ajout de styles pour les diviseurs */
+.about-section hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+.card-body{
+  color: #201c1c;
+}
+
+.about-section{
+  color: #524d4d;
+}
+.btn.btn-success{
+  background-color: #33c92d;
+  border: #33c92d 1px solid;
+}
+
+.drop .nav-item .nav-link{
+    color: #888;
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    position: relative;
+    font-size: 0.8125rem;
+    line-height: 1;
+    height: auto;
+    border-top: 0;
+}
+.custom-icon-size {
+  font-size: 15px;
+  /* Adjust the size as needed */
+}
+.dropdown-active {
+ 
+  color: white; /* Assurez-vous que le texte reste visible sur le fond blanc */
+}
+
+/* custom.css */
+.search-bar .form-control {
+  width: 30%;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+}
+
+
+
+
+.image-ronde{
+  width : 250px; height : 250px;
+  border: none;
+  -moz-border-radius : 75px;
+  -webkit-border-radius : 75px;
+  border-radius : 75px;
+}
+

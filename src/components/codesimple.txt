@@ -1,0 +1,37 @@
+ const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const insert = await axios.post(`${Lien}/typeC`, { nom: nomInsertion, date_nom: dateNomInsertion });
+      console.log('Réponse de la requête POST:', insert.data);
+      setNomInsertion('');
+      setDateNomInsertion('');
+      handleClose();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+   const handleDelete = async (id) => {
+    try {
+      // Envoyer une requête DELETE à votre API avec l'ID de l'entrée à supprimer
+      const response = await axios.delete(`${Lien}/typeC/${id}`);
+      console.log('Réponse de la requête DELETE:', response.data);
+
+      // Mettre à jour l'état contrat en filtrant les entrées avec l'ID supprimé
+      setContrat(prevContrat => prevContrat.filter(item => item.id !== id));
+    } catch (error) {
+      console.error('Erreur lors de la suppression des données:', error);
+    }
+  };
+
+   const handleSaveChanges = async () => {
+    const updatedData = { ...editData, nom: nomModification, date_nom: dateNomModification };
+    try {
+      const response = await axios.put(`${Lien}/typeC/${editData.id}`, updatedData);
+      console.log('Réponse de la requête PUT:', response.data);
+      setContrat(prevContrat => prevContrat.map(item => item.id === editData.id ? updatedData : item));
+    } catch (error) {
+      console.error('Erreur lors de la mise à jour des données:', error);
+    }
+    handleCloseModal();
+  };

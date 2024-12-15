@@ -1,0 +1,11 @@
+npx sequelize-cli db:migrate
+npx sequelize-cli migration:generate --name create_users_table
+npm install sequelize mysql2
+npx sequelize-cli init
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+docker build -t your-nodejs-app .
+docker run -p 3001:3001 your-nodejs-app
+docker build -t your-backend-app .
+docker build -t your-frontend-app .
+docker run -p 3001:3001 your-backend-app
+docker run -p 3000:3000 your-frontend-app

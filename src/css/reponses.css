@@ -1,0 +1,9 @@
+.reponse{
+    display: none;
+    min-block-size: 10px;
+}
+.afficher{
+    display: block;
+    font-size:large ;
+    word-spacing: 5%;
+}

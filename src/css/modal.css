@@ -1,0 +1,35 @@
+.modal-body {
+    max-height: 60vh; /* Limite la hauteur du corps de la modal à 60% de la hauteur de la fenêtre */
+    overflow-y: auto; /* Ajoute un défilement vertical si le contenu dépasse la hauteur */
+  }
+.modal-content{
+    background-color: white;
+  
+  }
+  .modal-content form input{
+    border-bottom: 1px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    overflow-y: auto;
+  }
+  
+  .modal-content form input.image{
+    border-bottom: 1px solid grey;
+    border-top:1px solid grey;
+    border-right:1px solid grey;
+    border-left:1px solid grey;
+  }
+  
+  .modal-content form label{
+    color: gray;
+  }
+  
+  .modal-title{
+    text-align: center;
+    font-weight: bolder;
+    color: #33c92d;
+    margin-left: 12%;
+  }
+  
